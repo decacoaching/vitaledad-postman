@@ -2822,14 +2822,26 @@
 					"response": []
 				},
 				{
-					"name": "Get Next Exercise Patient1",
+					"name": "Get 1st Exercise Patient1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"exercise_level_1\", jsonData.exercise_level_id.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "apikey",
 							"apikey": [
 								{
 									"key": "value",
-									"value": "Token {{doctor1_token}}",
+									"value": "Token {{patient1_token}}",
 									"type": "string"
 								},
 								{
@@ -2858,14 +2870,14 @@
 					"response": []
 				},
 				{
-					"name": "Send Feedback  Patient1",
+					"name": "Send Feedback  Doctor1",
 					"request": {
 						"auth": {
 							"type": "apikey",
 							"apikey": [
 								{
 									"key": "value",
-									"value": "Token {{patient1_token}}",
+									"value": "Token {{doctor1_token}}",
 									"type": "string"
 								},
 								{
@@ -2894,14 +2906,14 @@
 					"response": []
 				},
 				{
-					"name": "Send Feedback  Doctor1",
+					"name": "Send 1st Feedback  Patient1",
 					"request": {
 						"auth": {
 							"type": "apikey",
 							"apikey": [
 								{
 									"key": "value",
-									"value": "Token {{doctor1_token}}",
+									"value": "Token {{patient1_token}}",
 									"type": "string"
 								},
 								{
@@ -2913,6 +2925,246 @@
 						},
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"exercise_level\": \"{{exercise_level_1}}\",\n    \"feedback\": \"yellow\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/send_feedback/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"send_feedback",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send duplicated 1st Feedback Patient1",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{patient1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"exercise_level\": \"{{exercise_level_1}}\",\n    \"feedback\": \"yellow\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/send_feedback/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"send_feedback",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get 2nd Exercise Patient1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"exercise_level_2\", jsonData.exercise_level_id.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{patient1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/next_exercise/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"next_exercise",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send 2nd Feedback  Patient1",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{patient1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"exercise_level\": \"{{exercise_level_2}}\",\n    \"feedback\": \"green\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/send_feedback/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"send_feedback",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get 3th Exercise Patient1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"exercise_level_3\", jsonData.exercise_level_id.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{patient1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/next_exercise/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"next_exercise",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send 3th Feedback  Patient1",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{patient1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"exercise_level\": \"{{exercise_level_3}}\",\n    \"feedback\": \"green\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{base_url}}/api/v1/training_plans/send_feedback/",
 							"host": [
