@@ -25,7 +25,7 @@
 					],
 					"request": {
 						"auth": {
-							"type": "bearer"
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [],
@@ -69,25 +69,13 @@
 					],
 					"request": {
 						"auth": {
-							"type": "apikey",
-							"apikey": [
-								{
-									"key": "value",
-									"value": "Token {{doctor1_token}}",
-									"type": "string"
-								},
-								{
-									"key": "key",
-									"value": "Authorization",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"dcebrian+doctor1@serincas.com\",\n    \"password\": \"12345678AAB\"\n}",
+							"raw": "{\n    \"username\": \"ambre@okgo.fr\",\n    \"password\": \"am-breOKGO31!\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -125,7 +113,7 @@
 					],
 					"request": {
 						"auth": {
-							"type": "bearer"
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [],
@@ -169,7 +157,7 @@
 					],
 					"request": {
 						"auth": {
-							"type": "bearer"
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [],
@@ -213,7 +201,7 @@
 					],
 					"request": {
 						"auth": {
-							"type": "bearer"
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [],
@@ -257,7 +245,7 @@
 					],
 					"request": {
 						"auth": {
-							"type": "bearer"
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [],
@@ -301,7 +289,7 @@
 					],
 					"request": {
 						"auth": {
-							"type": "bearer"
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [],
