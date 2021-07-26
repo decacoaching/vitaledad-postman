@@ -17,7 +17,7 @@
 							"script": {
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"admin_token\", jsonData.token);"
+									"postman.setEnvironmentVariable(\"admin_token\", jsonData.auth_token);"
 								],
 								"type": "text/javascript"
 							}
@@ -31,7 +31,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"dcebrian@serincas.com\",\n    \"password\": \"12345678AAB\"\n}",
+							"raw": "{\n    \"email\": \"dcebrian@serincas.com\",\n    \"password\": \"12345678AAB\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -39,14 +39,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/api/v1/token-auth/",
+							"raw": "{{base_url}}/api/v1/auth/token/login/",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"token-auth",
+								"auth",
+								"token",
+								"login",
 								""
 							]
 						}
@@ -61,7 +63,7 @@
 							"script": {
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"doctor1_token\", jsonData.token);"
+									"postman.setEnvironmentVariable(\"doctor1_token\", jsonData.auth_token);"
 								],
 								"type": "text/javascript"
 							}
@@ -75,7 +77,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"ambre@okgo.fr\",\n    \"password\": \"am-breOKGO31!\"\n}",
+							"raw": "{\n    \"email\": \"{{doctor1_mail}}\",\n    \"password\": \"{{doctor1_password}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -83,14 +85,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/api/v1/token-auth/",
+							"raw": "{{base_url}}/api/v1/auth/token/login/",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"token-auth",
+								"auth",
+								"token",
+								"login",
 								""
 							]
 						}
@@ -105,7 +109,7 @@
 							"script": {
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"doctor2_token\", jsonData.token);"
+									"postman.setEnvironmentVariable(\"doctor2_token\", jsonData.auth_token);"
 								],
 								"type": "text/javascript"
 							}
@@ -119,7 +123,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"dcebrian+doctor2@serincas.com\",\n    \"password\": \"12345678AAB\"\n}",
+							"raw": "{\n    \"email\": \"{{doctor2_mail}}\",\n    \"password\": \"{{doctor2_password}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -127,14 +131,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/api/v1/token-auth/",
+							"raw": "{{base_url}}/api/v1/auth/token/login/",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"token-auth",
+								"auth",
+								"token",
+								"login",
 								""
 							]
 						}
@@ -149,7 +155,7 @@
 							"script": {
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"coach1_token\", jsonData.token);"
+									"postman.setEnvironmentVariable(\"coach1_token\", jsonData.auth_token);"
 								],
 								"type": "text/javascript"
 							}
@@ -163,7 +169,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"dcebrian+coach1@serincas.com\",\n    \"password\": \"12345678AAB\"\n}",
+							"raw": "{\n    \"email\": \"{{coach1_mail}}\",\n    \"password\": \"{{coach1_password}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -171,14 +177,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/api/v1/token-auth/",
+							"raw": "{{base_url}}/api/v1/auth/token/login/",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"token-auth",
+								"auth",
+								"token",
+								"login",
 								""
 							]
 						}
@@ -193,7 +201,7 @@
 							"script": {
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"coach2_token\", jsonData.token);"
+									"postman.setEnvironmentVariable(\"coach2_token\", jsonData.auth_token);"
 								],
 								"type": "text/javascript"
 							}
@@ -207,7 +215,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"dcebrian+coach2@serincas.com\",\n    \"password\": \"12345678AAB\"\n}",
+							"raw": "{\n    \"email\": \"{{coach2_mail}}\",\n    \"password\": \"{{coach2_password}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -215,14 +223,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/api/v1/token-auth/",
+							"raw": "{{base_url}}/api/v1/auth/token/login/",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"token-auth",
+								"auth",
+								"token",
+								"login",
 								""
 							]
 						}
@@ -237,7 +247,7 @@
 							"script": {
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"patient1_token\", jsonData.token);"
+									"postman.setEnvironmentVariable(\"patient1_token\", jsonData.auth_token);"
 								],
 								"type": "text/javascript"
 							}
@@ -251,7 +261,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"dcebrian+patient1@serincas.com\",\n    \"password\": \"{{patient1_password}}\"\n}",
+							"raw": "{\n    \"email\": \"dcebrian+patient1@serincas.com\",\n    \"password\": \"{{patient1_password}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -259,14 +269,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/api/v1/token-auth/",
+							"raw": "{{base_url}}/api/v1/auth/token/login/",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"token-auth",
+								"auth",
+								"token",
+								"login",
 								""
 							]
 						}
@@ -281,7 +293,7 @@
 							"script": {
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"patient2_token\", jsonData.token);"
+									"postman.setEnvironmentVariable(\"patient2_token\", jsonData.auth_token);"
 								],
 								"type": "text/javascript"
 							}
@@ -295,7 +307,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"dcebrian+patient2@serincas.com\",\n    \"password\": \"12345678AAB\"\n}",
+							"raw": "{\n    \"email\": \"dcebrian+patient2@serincas.com\",\n    \"password\": \"12345678AAB\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -303,14 +315,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/api/v1/token-auth/",
+							"raw": "{{base_url}}/api/v1/auth/token/login/",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"token-auth",
+								"auth",
+								"token",
+								"login",
 								""
 							]
 						}
@@ -491,6 +505,71 @@
 								"v1",
 								"users",
 								"user_types",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Doctor1 password reset 1st call",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"{{doctor1_mail}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/auth/users/reset_password/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"users",
+								"reset_password",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Doctor 1 password reset confirmation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uid\": \"N2M1Y2JhNDYtZmM0MC00ZWYyLWI1YmQtZjQxNDA3ZDQxMDMz\",\n    \"token\": \"aqf188-02af6d8ec460ba65132702a8b5e72130\",\n    \"new_password\": \"XXXXXXXX\",\n    \"re_new_password\": \"XXXXXXXX\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/auth/users/reset_password_confirm/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"users",
+								"reset_password_confirm",
 								""
 							]
 						}
@@ -932,6 +1011,54 @@
 							"apikey": [
 								{
 									"key": "value",
+									"value": "Token {{doctor2_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_programs/training_program/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_programs",
+								"training_program",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get TrainingPrograms  Doctor 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"training_program1_id\", jsonData[1].id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
 									"value": "Token {{doctor1_token}}",
 									"type": "string"
 								},
@@ -1174,6 +1301,18 @@
 			"item": [
 				{
 					"name": "Create Patient Doctor 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"patient1_id\", jsonData.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "apikey",
@@ -1194,7 +1333,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"first_name\": \"Jaime\",\n    \"last_name\": \"Peñas\",\n    \"birth_date\": \"1972-06-06\",\n    \"email\": \"dcebrian+patient353@serincas.com\",\n    \"mobile_number\": \"+34666656665\"\n}",
+							"raw": "{\n    \"first_name\": \"Jaime\",\n    \"last_name\": \"Peñas\",\n    \"birth_date\": \"1972-06-06\",\n    \"email\": \"dcebrian+patient35@serincas.com\",\n    \"mobile_number\": \"+34666666665\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1330,7 +1469,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"patient_id\": \"{{patient1_id}}\",\n    \"height\": 174,\n    \"weight\": 60,\n    \"blood_pressure_high\": 130,\n    \"blood_pressure_low\": 95,\n    \"resting_heart_rate\": 40,\n    \"injuries_ids\": [\n        \"8d3abe5e-1c32-4a72-9209-39512fe885e2\",\n        \"ed51ff8b-e24c-4f00-930d-d4bc9b3a17f8\"\n    ] \n}",
+							"raw": "{\n    \"patient_id\": \"{{patient1_id}}\",\n    \"height\": 174,\n    \"weight\": 60,\n    \"blood_pressure_high\": 130,\n    \"blood_pressure_low\": 95,\n    \"resting_heart_rate\": 40,\n    \"injuries_ids\": [\n        \"809128c2-565f-4b55-9398-86e9641a8a41\",\n        \"77f22d8c-c300-4fc9-93cd-eded1cd3e8dd\"\n    ] \n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1780,7 +1919,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/api/v1/tests/sppb/next_step/{{sppbtest_id_1}}/",
+							"raw": "{{base_url}}/api/v1/tests/sppb/next_step/5381fc6e-1555-4d66-8ffd-e87e5231b6dd/",
 							"host": [
 								"{{base_url}}"
 							],
@@ -1790,7 +1929,7 @@
 								"tests",
 								"sppb",
 								"next_step",
-								"{{sppbtest_id_1}}",
+								"5381fc6e-1555-4d66-8ffd-e87e5231b6dd",
 								""
 							]
 						}
@@ -2915,7 +3054,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"exercise_level\": \"{{exercise_level_1}}\",\n    \"feedback\": \"yellow\"\n}",
+							"raw": "{\n    \"exercise_level\": \"{{exercise_level_1}}\",\n    \"feedback\": \"green\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
