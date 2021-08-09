@@ -582,6 +582,156 @@
 			"name": "Catalogs",
 			"item": [
 				{
+					"name": "Get AnatomicRegions Coach 1",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{coach1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/medical_catalog/anatomic_region/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"medical_catalog",
+								"anatomic_region",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get AnatomicRegions Doctor 1",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{doctor1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/medical_catalog/anatomic_region/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"medical_catalog",
+								"anatomic_region",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get AnatomicRegions Patient 1",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{patient1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/medical_catalog/anatomic_region/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"medical_catalog",
+								"anatomic_region",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get AnatomicRegions Coach 1 Filtered by locomotor_system",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{coach1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/medical_catalog/anatomic_region/?locomotor_system=True",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"medical_catalog",
+								"anatomic_region",
+								""
+							],
+							"query": [
+								{
+									"key": "locomotor_system",
+									"value": "True"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get BodyParts Coach 1",
 					"request": {
 						"auth": {
@@ -687,6 +837,48 @@
 							]
 						},
 						"description": "Must retrieve 0 bodyparts, because patientes have no acces to them"
+					},
+					"response": []
+				},
+				{
+					"name": "Get BodyParts Coach 1 Filtered by Anatomic Region",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{coach1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/medical_catalog/body_parts/?anatomic_region=18216678-aa5a-44af-9b32-0d5e84728fe0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"medical_catalog",
+								"body_parts",
+								""
+							],
+							"query": [
+								{
+									"key": "anatomic_region",
+									"value": "18216678-aa5a-44af-9b32-0d5e84728fe0"
+								}
+							]
+						}
 					},
 					"response": []
 				},
