@@ -352,7 +352,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/api/v1/users/user_types/",
+							"raw": "{{base_url}}/api/v1/users/user_data/",
 							"host": [
 								"{{base_url}}"
 							],
@@ -360,7 +360,7 @@
 								"api",
 								"v1",
 								"users",
-								"user_types",
+								"user_data",
 								""
 							]
 						}
@@ -388,7 +388,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/api/v1/users/user_types/",
+							"raw": "{{base_url}}/api/v1/users/user_data/",
 							"host": [
 								"{{base_url}}"
 							],
@@ -396,7 +396,7 @@
 								"api",
 								"v1",
 								"users",
-								"user_types",
+								"user_data",
 								""
 							]
 						}
@@ -424,7 +424,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/api/v1/users/user_types/",
+							"raw": "{{base_url}}/api/v1/users/user_data/",
 							"host": [
 								"{{base_url}}"
 							],
@@ -432,7 +432,7 @@
 								"api",
 								"v1",
 								"users",
-								"user_types",
+								"user_data",
 								""
 							]
 						}
@@ -460,7 +460,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/api/v1/users/user_types/",
+							"raw": "{{base_url}}/api/v1/users/user_data/",
 							"host": [
 								"{{base_url}}"
 							],
@@ -468,7 +468,7 @@
 								"api",
 								"v1",
 								"users",
-								"user_types",
+								"user_data",
 								""
 							]
 						}
@@ -496,7 +496,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/api/v1/users/user_types/",
+							"raw": "{{base_url}}/api/v1/users/user_data/",
 							"host": [
 								"{{base_url}}"
 							],
@@ -504,7 +504,7 @@
 								"api",
 								"v1",
 								"users",
-								"user_types",
+								"user_data",
 								""
 							]
 						}
