@@ -1569,6 +1569,49 @@
 						"method": "GET",
 						"header": [],
 						"url": {
+							"raw": "{{base_url}}/api/v1/users/patient/?search=jaime",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"patient",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "jaime"
+								}
+							]
+						},
+						"description": "Must retrieve the patient created"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patients Doctor 1 Filtered",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{doctor1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
 							"raw": "{{base_url}}/api/v1/users/patient/",
 							"host": [
 								"{{base_url}}"
