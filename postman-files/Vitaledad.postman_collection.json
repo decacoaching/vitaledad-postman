@@ -572,6 +572,98 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Doctor 1 password change",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{doctor1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"current_password\": \"{{doctor1_password}}\",\n    \"new_password\": \"{{doctor1_password2}}\",\n    \"re_new_password\": \"{{doctor1_password2}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/auth/users/set_password/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"users",
+								"set_password",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Doctor 1 password rechange",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{doctor1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"current_password\": \"{{doctor1_password2}}\",\n    \"new_password\": \"{{doctor1_password}}\",\n    \"re_new_password\": \"{{doctor1_password}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/auth/users/set_password/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"users",
+								"set_password",
+								""
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -801,6 +893,42 @@
 					"response": []
 				},
 				{
+					"name": "Get BodyParts Doctor 1",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{doctor1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/medical_catalog/body_parts/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"medical_catalog",
+								"body_parts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get BodyParts Patient 1",
 					"request": {
 						"auth": {
@@ -888,6 +1016,42 @@
 								{
 									"key": "value",
 									"value": "Token {{coach1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/medical_catalog/injuries/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"medical_catalog",
+								"injuries",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Injuries Doctor 1",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{doctor1_token}}",
 									"type": "string"
 								},
 								{
@@ -1546,7 +1710,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Patients Doctor 1",
+					"name": "Get Patients Doctor 1 Filtered",
 					"request": {
 						"auth": {
 							"type": "apikey",
@@ -1589,7 +1753,50 @@
 					"response": []
 				},
 				{
-					"name": "Get Patients Doctor 1 Filtered",
+					"name": "Get Patients Doctor 1 Filtered by lock",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{doctor1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/users/patient/?patient_locked=true",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"patient",
+								""
+							],
+							"query": [
+								{
+									"key": "patient_locked",
+									"value": "true"
+								}
+							]
+						},
+						"description": "Must retrieve the patient created"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patients Doctor 1",
 					"request": {
 						"auth": {
 							"type": "apikey",
@@ -2208,7 +2415,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/api/v1/tests/sppb/next_step/5381fc6e-1555-4d66-8ffd-e87e5231b6dd/",
+							"raw": "{{base_url}}/api/v1/tests/sppb/next_step/{{sppbtest_id_1}}/",
 							"host": [
 								"{{base_url}}"
 							],
@@ -2218,7 +2425,7 @@
 								"tests",
 								"sppb",
 								"next_step",
-								"5381fc6e-1555-4d66-8ffd-e87e5231b6dd",
+								"{{sppbtest_id_1}}",
 								""
 							]
 						}
@@ -3280,8 +3487,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"var jsonData = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"exercise_level_1\", jsonData.exercise_level_id.id);"
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -3306,7 +3512,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/api/v1/training_plans/next_exercise/",
+							"raw": "{{base_url}}/api/v1/training_plans/daily_plan/",
 							"host": [
 								"{{base_url}}"
 							],
@@ -3314,7 +3520,7 @@
 								"api",
 								"v1",
 								"training_plans",
-								"next_exercise",
+								"daily_plan",
 								""
 							]
 						}
@@ -3407,6 +3613,96 @@
 				},
 				{
 					"name": "Send 1st Feedback  Patient1",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{patient1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"exercise_level\": \"{{exercise_level_1}}\",\n    \"feedback\": \"green\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/send_feedback/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"send_feedback",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send 1st red Feedback Patient1",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{patient1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"exercise_level\": \"{{exercise_level_1}}\",\n    \"feedback\": \"red\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/send_feedback/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"send_feedback",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send 1st yellow Feedback Patient1",
 					"request": {
 						"auth": {
 							"type": "apikey",
@@ -3851,78 +4147,6 @@
 					"response": []
 				}
 			]
-		},
-		{
-			"name": "Get BodyParts Doctor 1",
-			"request": {
-				"auth": {
-					"type": "apikey",
-					"apikey": [
-						{
-							"key": "value",
-							"value": "Token {{doctor1_token}}",
-							"type": "string"
-						},
-						{
-							"key": "key",
-							"value": "Authorization",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{base_url}}/api/v1/medical_catalog/body_parts/",
-					"host": [
-						"{{base_url}}"
-					],
-					"path": [
-						"api",
-						"v1",
-						"medical_catalog",
-						"body_parts",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get Injuries Doctor 1",
-			"request": {
-				"auth": {
-					"type": "apikey",
-					"apikey": [
-						{
-							"key": "value",
-							"value": "Token {{doctor1_token}}",
-							"type": "string"
-						},
-						{
-							"key": "key",
-							"value": "Authorization",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{base_url}}/api/v1/medical_catalog/injuries/",
-					"host": [
-						"{{base_url}}"
-					],
-					"path": [
-						"api",
-						"v1",
-						"medical_catalog",
-						"injuries",
-						""
-					]
-				}
-			},
-			"response": []
 		}
 	],
 	"event": [
