@@ -1686,7 +1686,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"first_name\": \"Jaime\",\n    \"last_name\": \"Peñas\",\n    \"birth_date\": \"1972-06-06\",\n    \"email\": \"dcebrian+patient35@serincas.com\",\n    \"mobile_number\": \"+34666666665\"\n}",
+							"raw": "{\n    \"first_name\": \"Jaime\",\n    \"last_name\": \"Peñas\",\n    \"birth_date\": \"1972-06-06\",\n    \"email\": \"dcebrian+patient36@serincas.com\",\n    \"mobile_number\": \"+34666669665\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3972,6 +3972,259 @@
 								"training_plans",
 								"send_feedback",
 								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get exercise log registry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{patient1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/exercise_log_registry/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"exercise_log_registry",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get exercise log registry filtered by training plan",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{patient1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/exercise_log_registry/?training_plan=67fdec90-1f3a-4baf-b8d2-860f307d7068",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"exercise_log_registry",
+								""
+							],
+							"query": [
+								{
+									"key": "training_plan",
+									"value": "67fdec90-1f3a-4baf-b8d2-860f307d7068"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get exercise log registry Doctor 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{doctor1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/exercise_log_registry/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"exercise_log_registry",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get exercise log registry Doctor 1 filtered by patient",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{doctor1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/exercise_log_registry/?patient=d67a9506-6f87-417d-8719-659390a9843d",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"exercise_log_registry",
+								""
+							],
+							"query": [
+								{
+									"key": "patient",
+									"value": "d67a9506-6f87-417d-8719-659390a9843d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get exercise log registry Doctor 1 filtered by training plan",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{doctor1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/exercise_log_registry/?training_plan=67fdec90-1f3a-4baf-b8d2-860f307d7068",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"exercise_log_registry",
+								""
+							],
+							"query": [
+								{
+									"key": "training_plan",
+									"value": "67fdec90-1f3a-4baf-b8d2-860f307d7068"
+								}
 							]
 						}
 					},
