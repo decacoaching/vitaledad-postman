@@ -4078,6 +4078,59 @@
 					"response": []
 				},
 				{
+					"name": "Get exercise log registry filtered by feedback",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{patient1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/exercise_log_registry/?feedback=green",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"exercise_log_registry",
+								""
+							],
+							"query": [
+								{
+									"key": "feedback",
+									"value": "green"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get exercise log registry Doctor 1",
 					"event": [
 						{
@@ -4224,6 +4277,59 @@
 								{
 									"key": "training_plan",
 									"value": "67fdec90-1f3a-4baf-b8d2-860f307d7068"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get exercise log registry Doctor 1 filtered by feedback",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{doctor1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/exercise_log_registry/?feedback=red",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"exercise_log_registry",
+								""
+							],
+							"query": [
+								{
+									"key": "feedback",
+									"value": "red"
 								}
 							]
 						}
