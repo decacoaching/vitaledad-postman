@@ -4335,6 +4335,365 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get change level log",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{patient1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/change_level_log/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"change_level_log",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get change level log filtered by training plan",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{patient1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/change_level_log/?training_plan=67fdec90-1f3a-4baf-b8d2-860f307d7068",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"change_level_log",
+								""
+							],
+							"query": [
+								{
+									"key": "training_plan",
+									"value": "67fdec90-1f3a-4baf-b8d2-860f307d7068"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get change level log filtered by change type",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{patient1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/change_level_log/?change_type=locked",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"change_level_log",
+								""
+							],
+							"query": [
+								{
+									"key": "change_type",
+									"value": "locked"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get change level log Doctor 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{doctor1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/change_level_log/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"change_level_log",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get change level log Doctor 1 filtered by patient",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{doctor1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/change_level_log/?patient=d67a9506-6f87-417d-8719-659390a9843d",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"change_level_log",
+								""
+							],
+							"query": [
+								{
+									"key": "patient",
+									"value": "d67a9506-6f87-417d-8719-659390a9843d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get change level log Doctor 1 filtered by training plan",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{doctor1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/change_level_log/?training_plan=67fdec90-1f3a-4baf-b8d2-860f307d7068",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"change_level_log",
+								""
+							],
+							"query": [
+								{
+									"key": "training_plan",
+									"value": "67fdec90-1f3a-4baf-b8d2-860f307d7068"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get change level log Doctor 1 filtered by change type",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{doctor1_token}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/training_plans/change_level_log/?change_type=locked",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"training_plans",
+								"change_level_log",
+								""
+							],
+							"query": [
+								{
+									"key": "change_type",
+									"value": "locked"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
